@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>MyStore</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+
+<div class="logo">MyStore</div>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+<button>🔍</button>
+</div>
+
+<div class="cart-icon" onclick="openCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
+</header>
+
+<nav class="nav-menu">
+<a href="#">All</a>
+<a href="#">Electronics</a>
+<a href="#">Fashion</a>
+<a href="#">Books</a>
+<a href="#">Deals</a>
+</nav>
+
+<h1 class="title">Products</h1>
+
+<div class="products">
+
+<div class="product">
+
+<img src="images/product4.jpg" class="product-img">
+
+<h3 class="product-name">Wireless Headphones</h3>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(120 reviews)</span>
+</div>
+
+<p>$79</p>
+
+<button onclick="addToCart('Wireless Headphones',79)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img src="images/product2.jpg" class="product-img">
+
+<h3 class="product-name">Smart Watch</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(340 reviews)</span>
+</div>
+
+<p>$120</p>
+
+<button onclick="addToCart('Smart Watch',120)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img src="images/product1.jpg" class="product-img">
+
+<h3 class="product-name">Gaming Mouse</h3>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(90 reviews)</span>
+</div>
+
+<p>$45</p>
+
+<button onclick="addToCart('Gaming Mouse',45)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img src="images/product3.jpg" class="product-img">
+
+<h3 class="product-name">Laptop Backpack</h3>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(150 reviews)</span>
+</div>
+
+<p>$60</p>
+
+<button onclick="addToCart('Laptop Backpack',60)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<!-- CART -->
+
+<div id="cart" class="cart">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<span class="close-cart" onclick="closeCart()">✖</span>
+
+</div>
+
+<ul id="cart-items"></ul>
+
+<h3>Total: $<span id="total">0</span></h3>
+
+<button class="order" onclick="goToCheckout()">Place Order</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
